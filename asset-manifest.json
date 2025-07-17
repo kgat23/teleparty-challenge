@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/teleparty-challenge/static/css/main.2a874bf1.css",
-    "main.js": "/teleparty-challenge/static/js/main.e7ecd809.js",
+    "main.css": "/teleparty-challenge/static/css/main.eef19a6f.css",
+    "main.js": "/teleparty-challenge/static/js/main.972a2607.js",
     "static/js/453.90b4145e.chunk.js": "/teleparty-challenge/static/js/453.90b4145e.chunk.js",
     "index.html": "/teleparty-challenge/index.html",
-    "main.2a874bf1.css.map": "/teleparty-challenge/static/css/main.2a874bf1.css.map",
-    "main.e7ecd809.js.map": "/teleparty-challenge/static/js/main.e7ecd809.js.map",
+    "main.eef19a6f.css.map": "/teleparty-challenge/static/css/main.eef19a6f.css.map",
+    "main.972a2607.js.map": "/teleparty-challenge/static/js/main.972a2607.js.map",
     "453.90b4145e.chunk.js.map": "/teleparty-challenge/static/js/453.90b4145e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a874bf1.css",
-    "static/js/main.e7ecd809.js"
+    "static/css/main.eef19a6f.css",
+    "static/js/main.972a2607.js"
   ]
 }
