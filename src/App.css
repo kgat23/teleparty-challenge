@@ -1,5 +1,8 @@
 /* src/App.css */
-.App { text-align: center; }
+.App {
+  text-align: center;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -10,6 +13,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 input[type="text"] {
   padding: 10px;
   font-size: 16px;
@@ -17,6 +21,7 @@ input[type="text"] {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
 button {
   padding: 10px 20px;
   font-size: 16px;
@@ -25,6 +30,7 @@ button {
   border: none;
   background-color: #61dafb;
 }
+
 .chat-room {
   border: 1px solid #61dafb;
   border-radius: 8px;
@@ -32,6 +38,7 @@ button {
   width: 80%;
   max-width: 600px;
 }
+
 .messages {
   height: 400px;
   overflow-y: auto;
@@ -41,17 +48,53 @@ button {
   border-radius: 5px;
   margin-bottom: 10px;
 }
-.user-message { margin-bottom: 5px; }
-.system-message {
+
+.user-message {
   margin-bottom: 5px;
-  font-style: italic;
-  color: #aaa;
 }
+
 .typing-indicator {
   height: 20px;
   font-size: 14px;
   font-style: italic;
   color: #aaa;
 }
-.message-input { display: flex; }
-.message-input input { flex-grow: 1; }
+
+.message-input {
+  display: flex;
+}
+
+.message-input input {
+  flex-grow: 1;
+}
+
+/* --- New and Modified Styles --- */
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.timestamp {
+  font-size: 0.7em;
+  color: #bbb;
+}
+
+/* Enhanced styling for system messages */
+.system-message {
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background-color: #3a3f48;
+  border-radius: 5px;
+  text-align: center;
+  font-style: italic;
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+/* Remove the bolding from the system message "System:" text */
+.system-message .message-header strong {
+  font-weight: normal;
+}
