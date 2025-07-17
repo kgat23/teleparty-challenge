@@ -26,7 +26,7 @@ function JoinScreen({ createSession, joinSession }) {
   return (
     <div>
       <h2>Join or Create a Chat Room</h2>
-      {/* Users should be able to set their nickname when joining or creating a chat room [cite: 18] */}
+      {/* Users should be able to set their nickname when joining or creating a chat room */}
       <input
         type="text"
         placeholder="Enter your nickname"
@@ -34,12 +34,12 @@ function JoinScreen({ createSession, joinSession }) {
         onChange={(e) => setNickname(e.target.value)}
       />
       <div>
-        {/* Users should be able to press a button in order to create a chat room [cite: 13] */}
+        {/* Users should be able to press a button in order to create a chat room */}
         <button onClick={handleCreate}>Create Room</button>
       </div>
       <hr />
       <div>
-        {/* Users should be able to enter an ID in order to join a chat room [cite: 14] */}
+        {/* Users should be able to enter an ID in order to join a chat room */}
         <input
           type="text"
           placeholder="Enter Room ID to join"

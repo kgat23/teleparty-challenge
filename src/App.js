@@ -19,20 +19,20 @@ function App() {
         setIsConnected(true);
         console.log('Connection has been established');
       },
-      onClose: () => { // This function is called when the socket connection closes [cite: 82, 92]
+      onClose: () => { // This function is called when the socket connection closes
         setIsConnected(false);
         alert('Socket has been closed. Please reload.');
       },
-      onMessage: (message) => { // This function receives all messages from the server [cite: 40, 92]
+      onMessage: (message) => { // This function receives all messages from the server 
         // Process messages based on their type
         switch (message.type) {
-          case SocketMessageTypes.SEND_MESSAGE: // Type for receiving chat messages [cite: 41]
+          case SocketMessageTypes.SEND_MESSAGE: // Type for receiving chat messages 
             setMessages((prev) => [...prev, message.data]);
             break;
-          case SocketMessageTypes.SET_TYPING_PRESENCE: // Type for receiving typing updates [cite: 69]
+          case SocketMessageTypes.SET_TYPING_PRESENCE: // Type for receiving typing updates 
             setIsTyping(message.data.anyoneTyping);
             break;
-          case 'message-list': // Type for loading previous messages [cite: 59]
+          case 'message-list': // Type for loading previous messages 
             setMessages(message.data.messages);
             break;
           case 'session-joined':
@@ -51,7 +51,7 @@ function App() {
   // Function to create a chat room, as specified in the docs 
   const createSession = async (nickname) => {
     try {
-      const newSession = await teleparty.createChatRoom(nickname, null); // Pass null for the optional userIcon
+      const newSession = await teleparty.createChatRoom(nickname, null); 
       setSession(newSession);
       alert(`Room created! Your Room ID is: ${newSession.sessionId}`);
     } catch (error) {
@@ -62,20 +62,20 @@ function App() {
 
   // Function to join a chat room, as specified in the docs 
   const joinSession = (sessionId, nickname) => {
-    teleparty.joinChatRoom(nickname, sessionId, null); // Pass null for the optional userIcon
+    teleparty.joinChatRoom(nickname, sessionId, null); 
   };
 
-  // Function to send a chat message, as specified in the docs [cite: 32, 92]
+  // Function to send a chat message, as specified in the docs 
   const sendMessage = (body) => {
     teleparty.sendMessage(SocketMessageTypes.SEND_MESSAGE, {
-      body: body, // The data format for sending a message [cite: 35, 37]
+      body: body, // The data format for sending a message 
     });
   };
 
-  // Function to update typing presence, as specified in the docs [cite: 61, 92]
+  // Function to update typing presence, as specified in the docs 
   const setTyping = (isUserTyping) => {
     teleparty.sendMessage(SocketMessageTypes.SET_TYPING_PRESENCE, {
-      typing: isUserTyping, // The data format for updating typing presence [cite: 63, 64]
+      typing: isUserTyping, // The data format for updating typing presence 
     });
   };
 
@@ -84,7 +84,7 @@ function App() {
       <header className="App-header">
         <h1>Teleparty Challenge</h1>
         {!isConnected ? (
-          // Wait for the Connection to be ready before attempting to create/join a room [cite: 80]
+          // Wait for the Connection to be ready before attempting to create/join a room 
           <p>Connecting to server...</p>
         ) : !session ? (
           <JoinScreen createSession={createSession} joinSession={joinSession} />
