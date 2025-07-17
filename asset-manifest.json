@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/teleparty-challenge/static/css/main.2a874bf1.css",
+    "main.js": "/teleparty-challenge/static/js/main.e7ecd809.js",
+    "static/js/453.90b4145e.chunk.js": "/teleparty-challenge/static/js/453.90b4145e.chunk.js",
+    "index.html": "/teleparty-challenge/index.html",
+    "main.2a874bf1.css.map": "/teleparty-challenge/static/css/main.2a874bf1.css.map",
+    "main.e7ecd809.js.map": "/teleparty-challenge/static/js/main.e7ecd809.js.map",
+    "453.90b4145e.chunk.js.map": "/teleparty-challenge/static/js/453.90b4145e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a874bf1.css",
+    "static/js/main.e7ecd809.js"
+  ]
+}
